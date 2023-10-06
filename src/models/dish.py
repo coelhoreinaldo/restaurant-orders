@@ -39,3 +39,19 @@ class Dish:
 
     def get_ingredients(self):
         return set(self.recipe.keys())
+
+
+if __name__ == "__main__":
+    strogonoff_de_frango = Dish("strogonoff_de_frango", 17.50)
+
+    frango = Ingredient("frango")
+    creme_de_leite = Ingredient("creme de leite")
+
+    strogonoff_de_frango.add_ingredient_dependency(frango, 2)
+    strogonoff_de_frango.add_ingredient_dependency(creme_de_leite, 1)
+
+    print(strogonoff_de_frango)
+    print(strogonoff_de_frango.name)
+    print(strogonoff_de_frango.recipe)
+    print(strogonoff_de_frango.get_ingredients())
+    print(strogonoff_de_frango.get_restrictions())
