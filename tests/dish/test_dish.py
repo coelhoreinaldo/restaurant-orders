@@ -1,7 +1,7 @@
 from src.models.dish import Dish  # noqa: F401, E261, E501
 from src.models.ingredient import Ingredient, Restriction
 
-# import pytest
+import pytest
 
 
 def test_dish():
@@ -43,3 +43,11 @@ def test_dish():
         Restriction.ANIMAL_DERIVED,
         Restriction.ANIMAL_MEAT,
     }
+
+    with pytest.raises(TypeError, match="Dish price must be float."):
+        Dish("strogonoff_de_frango", "17.50")
+
+    with pytest.raises(
+        ValueError, match="Dish price must be greater then zero."
+    ):
+        Dish("strogonoff_de_frango", -17.50)
