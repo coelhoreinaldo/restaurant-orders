@@ -1,10 +1,32 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# 🍖 Restaurant Orders
+
+![Project](./project.png)
+
+## 📘 Sobre
+
+Implementação de estruturas de dados como Hashmap (usando Dict e Set em Python), manipulação de dados, realização de testes e aplicação de conceitos de orientação a objetos para desenvolver uma ferramenta de construção de cardápios para um restaurante.
+
+## ⚛️ Ferramentas
+
+- Python
+- Pytest
+- Algoritmos de busca e ordenação
+- Pilhas e Filas
+- Hasmap, Dict e Set
+- P.O.O
+
+## 🛠️ Como executar o projeto?
+
+1. criar o ambiente virtual
+```python3 -m venv .venv```
+2. ativar o ambiente virtual
+```source .venv/bin/activate```
+3. instalar as dependências no ambiente virtual
+```python3 -m pip install -r dev-requirements.txt```
+4. rodar o servidor
+```python3 -m uvicorn app:app```
+5. acesse a rota "/docs" para ver a documentação gerada pelo FastAPI
+
+## 📝 Nota
+
+![100% de aprovação no projeto](./grade.png)
