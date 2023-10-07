@@ -26,9 +26,3 @@ class MenuData:
                         )
 
             return dishes_collection
-
-
-# menu_data = MenuData("data/menu_base_data.csv")
-# menu_data_dishes = list(menu_data.dishes)
-# print(menu_data_dishes[0].get_ingredients())
-# print(menu_data_dishes[1].get_ingredients())
