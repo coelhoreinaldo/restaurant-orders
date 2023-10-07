@@ -31,6 +31,8 @@ class MenuBuilder:
         for dish in dishes:
             if restriction in dish.get_restrictions():
                 continue
+            if not self.inventory.check_recipe_availability(dish.recipe):
+                continue
             menu_dict = {}
             menu_dict["dish_name"] = dish.name
             menu_dict["price"] = dish.price
