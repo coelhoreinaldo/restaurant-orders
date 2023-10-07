@@ -25,7 +25,6 @@ class InventoryMapping:
     def __init__(self, inventory_file_path=BASE_INVENTORY) -> None:
         self.inventory = read_csv_inventory(inventory_file_path)
 
-    # Req 5.1
     def check_recipe_availability(self, recipe: Recipe) -> bool:
         return all(
             ingredient in self.inventory.keys()
@@ -33,10 +32,11 @@ class InventoryMapping:
             for ingredient, amount in recipe.items()
         )
 
-    # Req 5.2
     def consume_recipe(self, recipe: Recipe) -> None:
-        pass
+        is_available = self.check_recipe_availability(recipe)
 
+        if not is_available:
+            raise ValueError("Recipe is not available")
 
-inventory_mapping = InventoryMapping()
-inventory_mapping.check_recipe_availability({})
+        for ingredient, amount in recipe.items():
+            self.inventory[ingredient] -= amount
